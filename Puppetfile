@@ -1,6 +1,10 @@
 forge 'https://forge.puppet.com'
 
 mod 'puppetlabs-puppet_agent', '2.0.1'
+mod 'puppetlabs-stdlib', '5.2.0'
+mod 'puppetlabs-inifile', '2.5.0'
+mod 'puppetlabs-apt', '6.3.0'
+mod 'puppetlabs-translate', '1.2.0'
 
 # Modules from the Puppet Forge
 # Versions should be updated to be the latest at the time you start
