@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# restore ssl/certificate directories
+
+BACKUP_DIR=/tmp/backup
+
+mkdir -p /etc/puppetlabs/puppet
+
+tar -zxvf $BACKUP_DIR/puppet_ssl.tar.gz -C /
+
+#Removing PE internal certs so they can be regenerated
+rm -f /etc/puppetlabs/puppet/ssl/certs/pe-internal-classifier.pem
+rm -f /etc/puppetlabs/puppet/ssl/certs/pe-internal-dashboard.pem
+rm -f /etc/puppetlabs/puppet/ssl/private_keys/pe-internal-classifier.pem
+rm -f /etc/puppetlabs/puppet/ssl/private_keys/pe-internal-dashboard.pem
+rm -f /etc/puppetlabs/puppet/ssl/public_keys/pe-internal-classifier.pem
+rm -f /etc/puppetlabs/puppet/ssl/public_keys/pe-internal-dashboard.pem
+rm -f /etc/puppetlabs/puppet/ssl/ca/signed/pe-internal-classifier.pem
+rm -f /etc/puppetlabs/puppet/ssl/ca/signed/pe-internal-dashboard.pem
