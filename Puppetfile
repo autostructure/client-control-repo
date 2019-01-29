@@ -5,6 +5,8 @@ mod 'puppetlabs-stdlib', '5.2.0'
 mod 'puppetlabs-inifile', '2.5.0'
 mod 'puppetlabs-apt', '6.3.0'
 mod 'puppetlabs-translate', '1.2.0'
+# used by puppet_agent needs this...
+mod 'puppetlabs-facts', '0.5.0'
 
 # Modules from the Puppet Forge
 # Versions should be updated to be the latest at the time you start
